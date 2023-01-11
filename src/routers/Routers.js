@@ -8,6 +8,7 @@ import Delivery from "../pages/Delivery";
 import Certificate from "../pages/Certificate";
 import Stock from "../pages/Stock";
 import CorporateGifts from "../pages/CorporateGifts";
+import Sale from "../pages/Sale";
 
 
 const Routers = () => {
@@ -21,6 +22,7 @@ const Routers = () => {
                 <Route path="/certificate" element={<Certificate/>}/>
                 <Route path="/delivery" element={<Delivery/>}/>
                 <Route path="/corporate-gifts" element={<CorporateGifts/>}/>
+                <Route path="/sale" element={<Sale/>}/>
         </Routes>
 }
 export default Routers;
