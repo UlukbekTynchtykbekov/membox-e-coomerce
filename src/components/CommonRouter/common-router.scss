@@ -1,0 +1,35 @@
+.breadcrumbs {
+  margin: 30px 0 10px;
+
+  &__category {
+    display: inline-block;
+    position: relative;
+    padding: 0 15px 0 0;
+    margin: 0 10px 0 0;
+
+    &:after {
+      content: "/";
+      position: absolute;
+      right: 0;
+      top: 4px;
+      font-size: 13px;
+    }
+    &:first-child::after {
+      color: #a4a4a4;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.nav--active{
+  font-size: 13px;
+  color: #000;
+}
+
+.breadcrumbs__link{
+  font-size: 13px;
+  color: #a4a4a4;
+}
