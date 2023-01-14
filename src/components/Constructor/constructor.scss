@@ -201,4 +201,69 @@
   &__packing--item{
     width: 60%;
   }
+
+  &__bottom{
+      margin-top: auto!important;
+  }
+  &__filling{
+    margin: 0 -20px 20px;
+    padding: 20px;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+  }
+  &__filling--title{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 5px;
+  }
+  &__totals{
+    height: 3rem;
+    display: flex !important;
+  }
+  &__total--amount{
+    justify-content: end;
+  }
+  &__total--number{
+    margin-left: 20px;
+    font-size: 22px;
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+}
+
+.open{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  &__plus{
+    margin: 0 10px 0 0;
+  }
+}
+
+.progress{
+  width: 100%;
+  height: 15px;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 50px;
+  &__bar{
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #000;
+    transition: width .6s
+  }
+}
+
+.main--title{
+  text-decoration: underline;
 }

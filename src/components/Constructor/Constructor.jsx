@@ -165,7 +165,7 @@ const Constructor = () => {
                             <p className="right__filling--title">НАБОР ЗАПОЛНЕН НА 0%</p>
                             <div className="progress">
                                 <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                                     className="progress-bar"></div>
+                                     className="progress__bar"></div>
                             </div>
                         </div>
                         <div className="right__totals">
@@ -203,8 +203,8 @@ const Constructor = () => {
                             <div className="checkout__present">
                                 <div className="checkout__fill">
                                     <div className="checkout__text">
-                                        Добавьте ещё что-нибудь, чтобы сумма заказа стала 4000 р. и
-                                        <b>выбирайте подарок!</b>
+                                        Добавьте ещё что-нибудь, чтобы сумма заказа стала 4000 р. <и></и>
+                                        <b className="main--title">выбирайте подарок!</b>
                                     </div>
                                     <div className="checkout__progress">
                                         <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
