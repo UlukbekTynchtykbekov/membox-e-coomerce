@@ -203,7 +203,7 @@ const Constructor = () => {
                             <div className="checkout__present">
                                 <div className="checkout__fill">
                                     <div className="checkout__text">
-                                        Добавьте ещё что-нибудь, чтобы сумма заказа стала 4000 р. <и></и>
+                                        Добавьте ещё что-нибудь, чтобы сумма заказа стала 4000 р. и
                                         <b className="main--title">выбирайте подарок!</b>
                                     </div>
                                     <div className="checkout__progress">
