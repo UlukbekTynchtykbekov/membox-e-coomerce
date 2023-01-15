@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from "../ProductCard";
 
-const ProductList = () => {
+const ProductList = ({ setModalActive}) => {
     return (
         <>
             {/*{*/}
@@ -9,7 +9,7 @@ const ProductList = () => {
             {/*        <ProductCard key={item.id} item={item}/>*/}
             {/*    ))*/}
             {/*}*/}
-            <ProductCard />
+            <ProductCard setModalActive={setModalActive} />
         </>
     );
 };

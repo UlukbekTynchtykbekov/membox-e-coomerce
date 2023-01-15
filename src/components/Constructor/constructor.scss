@@ -13,6 +13,7 @@
 }
 
 .left {
+  width: 70%;
   &__box {
     position: relative;
     height: 100%;
@@ -120,11 +121,12 @@
 }
 
 .right {
-  width: 40%;
+  width: 30%;
+  height: 688px;
   margin: 0 0 0 15px;
   align-self: flex-start;
   position: -webkit-sticky;
-  //position: sticky;
+  position: sticky;
   top: 15px;
 
   &__cart {
@@ -210,7 +212,7 @@
   }
 
   &__bottom {
-    margin-top: 65%;
+    margin-top: 60%;
   }
 
   &__filling {
