@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductCard from "../ProductCard";
 
 const ProductList = () => {
     return (
@@ -8,7 +9,7 @@ const ProductList = () => {
             {/*        <ProductCard key={item.id} item={item}/>*/}
             {/*    ))*/}
             {/*}*/}
-
+            <ProductCard />
         </>
     );
 };

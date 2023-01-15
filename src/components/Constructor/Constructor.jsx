@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import "./constructor.scss"
+import ProductList from "../ProductList";
 
 const Constructor = () => {
     const filterRef = useRef(null);
@@ -358,6 +359,11 @@ const Constructor = () => {
                                     <input className="filter__input" type="text" placeholder="Поиск по названию"/>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="product product--margin">
+                        <div className="row">
+                            <ProductList />
                         </div>
                     </div>
                 </div>
