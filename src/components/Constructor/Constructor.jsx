@@ -1,8 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import "./constructor.scss"
 import ProductList from "../ProductList";
+import Modal from "../Modal";
 
 const Constructor = () => {
+    const  [ modalActive, setModalActive ] = useState(false)
     const filterRef = useRef(null);
     const sortRef = useRef(null);
 
@@ -32,7 +34,7 @@ const Constructor = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="button-description">
+                                <div onClick={() => setModalActive(true)} className="button-description">
                                     <div className="button-description__cover">
                                         <div className="button-description__btn">
                                         </div>
@@ -61,7 +63,7 @@ const Constructor = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="button-description">
+                                <div onClick={() => setModalActive(true)} className="button-description">
                                     <div className="button-description__cover">
                                         <div className="button-description__btn">
                                         </div>
@@ -90,7 +92,7 @@ const Constructor = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="button-description">
+                                <div onClick={() => setModalActive(true)} className="button-description">
                                     <div className="button-description__cover">
                                         <div className="button-description__btn">
                                         </div>
@@ -119,7 +121,7 @@ const Constructor = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="button-description">
+                                <div onClick={() => setModalActive(true)} className="button-description">
                                     <div className="button-description__cover">
                                         <div className="button-description__btn">
                                         </div>
@@ -363,7 +365,7 @@ const Constructor = () => {
                     </div>
                     <div className="product product--margin">
                         <div className="row">
-                            <ProductList />
+                            <ProductList setModalActive={setModalActive} />
                         </div>
                     </div>
                 </div>
@@ -477,6 +479,7 @@ const Constructor = () => {
                     </div>
                 </div>
             </div>
+            <Modal active={modalActive} setActive={ setModalActive }/>
         </div>
     );
 };

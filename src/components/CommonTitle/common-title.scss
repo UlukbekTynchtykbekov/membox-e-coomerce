@@ -5,3 +5,28 @@
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 990px) {
+  .common-section {
+    &__title {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .common-section {
+    &__title {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .common-section {
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+}
+

@@ -25,7 +25,7 @@ const Sale = () => {
                     <CommonRouter routes={saleRouters} />
                     <CommonTitle title="Акции" />
                     <div className="row wrapper">
-                        <div className="col-4">
+                        <div className="col-4 wrapper-column">
                             <div className="article">
                                 <div className="article__image">
                                     <Link to="second-box-for-sale" className="article__link" >
@@ -37,7 +37,7 @@ const Sale = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 wrapper-column">
                             <div className="article">
                                 <div className="article__image">
                                     <Link to="second-box-for-sale" className="article__link" >
@@ -49,7 +49,7 @@ const Sale = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 wrapper-column">
                             <div className="article">
                                 <div className="article__image">
                                     <Link to="second-box-for-sale" className="article__link" >
@@ -61,7 +61,7 @@ const Sale = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-4 wrapper-column">
                             <div className="article">
                                 <div className="article__image">
                                     <Link to="second-box-for-sale" className="article__link" >

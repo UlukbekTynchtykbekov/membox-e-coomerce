@@ -2,12 +2,14 @@
   &__description {
     margin: 50px 0 0;
   }
-  &__button{
+
+  &__button {
     margin-top: 80px !important;
   }
-  &__btn{
-    &:hover{
-      background: rgba(103,91,251,255);
+
+  &__btn {
+    &:hover {
+      background: rgba(103, 91, 251, 255);
     }
   }
 }
@@ -30,13 +32,18 @@
 }
 
 .description {
-  width: 60%;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+  }
 
   &__img {
-    width: 1210px;
+    width: 100%;
   }
 
   &__title {
+    width: 700px;
     font-family: inherit !important;
     font-size: 20px;
     line-height: 30px;
@@ -50,11 +57,12 @@
   }
 }
 
-.button--block{
+.button--block {
   width: 75%;
   margin: 40px 0;
   text-align: center;
-  &__btn{
+
+  &__btn {
     cursor: pointer;
     color: #fff;
     background-color: #000;
@@ -64,6 +72,48 @@
     padding: 1rem 1.5rem;
     font-size: 16px;
     border-radius: 0;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
+}
+
+@media (max-width: 820px) {
+  .description {
+    &__title {
+      width: 500px;
+      font-size: 17px;
+      line-height: 27px;
+    }
   }
+}
+
+@media (max-width: 820px) {
+  .description {
+    &__title {
+      align-items: center;
+      width: 100%;
+      font-size: 17px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .button--block {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sale-detail {
+    &__button {
+      margin-top: 40px !important;
+    }
+  }
+  .button--block {
+    &__btn {
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
