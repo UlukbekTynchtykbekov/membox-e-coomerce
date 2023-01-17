@@ -21,3 +21,25 @@
     font-weight: 700;
   }
 }
+
+@media (max-width: 1024px){
+  .wrapper-column{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+
+@media (max-width: 720px){
+  .wrapper-column{
+    width: 100%;
+  }
+  .article{
+    &__title{
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+  }
+}
