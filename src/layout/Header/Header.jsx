@@ -53,8 +53,8 @@ const Header = () => {
                                                     </li>
                                                     <li><Link className="open" to="/corporate-gifts">Корпоративным клиентам</Link>
                                                     </li>
-                                                    <li><Link className="open" to="/home">Поставщикам</Link></li>
-                                                    <li><Link className="open" to="/home">Контакты</Link></li>
+                                                    <li><Link className="open" to="/suppliers">Поставщикам</Link></li>
+                                                    <li><Link className="open" to="/contacts">Контакты</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
