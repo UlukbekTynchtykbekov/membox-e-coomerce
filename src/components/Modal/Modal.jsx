@@ -1,4 +1,4 @@
-import React from 'react';
+    import React from 'react';
 import './modal.scss'
 import  closeIcon  from "../../static/img/close-line.svg"
 
@@ -16,7 +16,7 @@ const Modal = ({ active, setActive }) => {
                                 <div className="modal__title">
                                     Деревянный ящик MANBOX с ломом
                                 </div>
-                                <div onClick={() => setActive(false)} className="modal__close">
+                                <div onClick={() => setActive(false)} className="modal-close">
                                     <a className="close--btn">
                                         <img className="close--icon" src={closeIcon} alt=""/>
                                     </a>
