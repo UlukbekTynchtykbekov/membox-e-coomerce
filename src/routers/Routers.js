@@ -12,6 +12,7 @@ import Sale from "../pages/Sale";
 import SaleDetail from "../pages/SaleDetail";
 import Contacts from "../pages/Contacts";
 import Suppliers from "../pages/Suppliers";
+import AllPresents from "../pages/AllProducts";
 
 
 const Routers = () => {
@@ -26,6 +27,7 @@ const Routers = () => {
                 <Route path="/delivery" element={<Delivery/>}/>
                 <Route path="/corporate-gifts" element={<CorporateGifts/>}/>
                 <Route path="/sale" element={<Sale/>}/>
+                <Route path="/all_products" element={<AllPresents/>}/>
                 <Route path="/sale/second-box-for-sale" element={<SaleDetail/>}/>
                 <Route path="/contacts" element={<Contacts/>}/>
                 <Route path="/suppliers" element={<Suppliers/>}/>

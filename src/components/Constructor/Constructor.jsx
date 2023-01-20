@@ -2,6 +2,8 @@ import React, {useRef, useState} from 'react';
 import "./constructor.scss"
 import ProductList from "../ProductList";
 import Modal from "../Modal";
+import closeIcon from "../../static/img/close-line.svg";
+import {Link} from "react-router-dom";
 
 const Constructor = () => {
     const  [ modalActive, setModalActive ] = useState(false)
@@ -147,11 +149,11 @@ const Constructor = () => {
                                     <div className="filter__title">
                                         Выбрать категорию
                                     </div>
-                                    <form className="content">
+                                    <div className="content">
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Все товары</b>
-                                                <input className="content__checked-input" value="all" type="radio" name="filter-category" checked="checked" />
+                                                <input className="content__checked-input" value="all" checked="checked" type="radio" name="filter-category" />
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
@@ -316,7 +318,7 @@ const Constructor = () => {
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-4">
@@ -328,7 +330,7 @@ const Constructor = () => {
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Популярные</b>
-                                                <input className="content__checked-input" type="radio" name="sort" checked="checked" />
+                                                <input className="content__checked-input" type="radio" name="sort" />
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
@@ -385,6 +387,13 @@ const Constructor = () => {
                                         </path>
                                     </svg>
                                 </button>
+                            </div>
+                        </div>
+                        <div className="button">
+                            <div className="modal-close">
+                                <a className="close--btn">
+                                    <img className="close--icon" src={closeIcon} alt=""/>
+                                </a>
                             </div>
                         </div>
                             <div className=" products right__products">
@@ -474,6 +483,9 @@ const Constructor = () => {
                             <div className="checkout__error--block">
                                 Минимальная сумма заказа
                                 <b>1500 р</b>
+                            </div>
+                            <div className="button--block">
+                                    <button className="button--block__btn">Посмотреть </button>
                             </div>
                         </div>
                     </div>

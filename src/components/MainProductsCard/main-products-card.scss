@@ -1,0 +1,155 @@
+
+.presents {
+  &__item {
+    width: 90%;
+    flex-direction: column !important;
+    display: flex !important;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__top {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+  }
+  &__add-wishList{
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    line-height: 40px;
+  }
+  &__mobile-type{
+    display: flex;
+  }
+  &__button{
+    display: none;
+  }
+  &__btn{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+  &__icon{
+    cursor: pointer;
+  }
+  &__image{
+    cursor: pointer;
+    position: relative;
+  }
+  &__ratio{
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    --bs-aspect-ratio: 100%;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__price{
+    display: flex;
+    line-height: 60px;
+    font-weight: 700;
+  }
+  &__price-number{
+    color: #ff4a62;
+  }
+  &__old-price{
+    font-size: 18px;
+    text-decoration: line-through;
+    margin: 0 0 0 15px;
+  }
+  &__sticker{
+    font-size: 14px;
+    font-weight: 700;
+    color: #665cff;
+  }
+  &__name{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+  &__name-link{
+    color: #000;
+  }
+  &__rating{
+    margin: 10px 0 7px;
+  }
+  &__start{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  &__buttons{
+    display: flex!important;
+    background: #f1f1f1;
+  }
+  &__add-toCart{
+    background-color: #665cff;
+    border-color: #665cff;
+    width: 50%;
+  }
+  &__btn-mobile-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  &__price-block{
+    display: none!important;
+  }
+  &__composition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    background: #f1f1f1;
+    padding: 1rem 0.2rem;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 600;
+    & a{
+      color: black;
+    }
+  }
+  &__btn{
+    color: #fff;
+    font-size: 14px;
+  }
+}
+
+.star{
+  fill: #a4a4a4;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+}
+
+.active{
+  fill: #ffb334!important;
+}
+
+.button-btn{
+  height: 50px;
+  width: 100%;
+  background: #f1f1f1;
+  font-weight: 700;
+}
+
+.price{
+  font-size: 23px;
+  margin: 0 0 0 20px;
+  color: #fff;
+  line-height: 100%;
+}
