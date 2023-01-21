@@ -4,7 +4,7 @@ import "./main-products-card.scss";
 
 const MainProductsCard = () => {
     return (
-        <div className="col-4">
+        <div className="col-4 presents__column">
             <div className="presents__item">
                 <div className="presents__top top">
                     <div className="presents__add-wishList">

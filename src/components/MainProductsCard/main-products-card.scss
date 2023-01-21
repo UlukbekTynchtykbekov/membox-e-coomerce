@@ -153,3 +153,12 @@
   color: #fff;
   line-height: 100%;
 }
+
+@media(max-width: 990px){
+  .presents__column{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
