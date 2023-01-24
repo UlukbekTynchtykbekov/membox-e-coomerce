@@ -1,16 +1,20 @@
 import React from 'react';
 import percent from "../../static/img/percent-line.svg";
 import thumbUp from "../../static/img/like.png";
+import close from "../../static/img/close-line.svg"
 import './filter.scss';
 
 const Filter = () => {
     return (
         <div className="sort">
-            <div className="sort__title">Фильтры</div>
+            <div className="sort__top-items">
+                <div className="sort__title">Фильтры</div>
+                <div className="sort__close"><img className="sort__close-btn" src={close} alt=""/></div>
+            </div>
             <div className="sort__items">
                 <div className="sort__item">
                     <div className="sort__buttons">
-                        <button type="button" className="sort__btn">
+                        <button type="button" className="sort__btn sort__btn-hover">
                             <span
                             className="sort__svg svg">
                                 <img className="sort__img" src={percent} alt=""/>
