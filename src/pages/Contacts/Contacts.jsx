@@ -4,7 +4,7 @@ import "../../styles/contacts.scss"
 import CommonRouter from "../../components/CommonRouter";
 import CommonTitle from "../../components/CommonTitle";
 import {Link} from "react-router-dom";
-import MapPage from "../../pages/Mappage";
+import MapPage from "../../components/Mappage";
 
 const Contacts = () => {
     const contactsRouters =[

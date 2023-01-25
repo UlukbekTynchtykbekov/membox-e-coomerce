@@ -47,104 +47,61 @@ const Suppliers = () => {
                             </div>
                         </div>
                         <div className="row__card">
-                            <div className="col">
-                                <div className="form-custom">
-                                    <div className="form">
-                                        <div className="text">
-                                            <div className="red required">
-                                                * Обязательно для заполнения
-                                            </div>
-                                        </div>
-                                        <div className="rows">
-                                            <div className="row">
-                                                <div className="name required">Название компании</div>
-                                                <div className="description required">
-                                                    Правовая форма (ООО, ИП и тд), торговая марка
-                                                </div>
-                                                <div className="answers">
-                                                    <div className="text">
-                                                        <input type="text" placeholder="Название компании" className="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">Регион работы</div>
-                                                <div className="description required">конктрентая область, по РФ, страны СНГ</div>
-                                                <div className="answers">
-                                                    <div className="text">
-                                                        <input type="text" placeholder="Регион работы" className="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">Сроки поставок до склада в г. Москва</div>
-                                                <div className="description required">в календарных днях</div>
-                                                <div className="answers">
-                                                    <div className="text">
-                                                        <input type="text" placeholder="Сроки поставок до склада в г. Москва" className="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">C кем работаете</div>
-                                                <div className="description required">
-                                                    оптовые продажи, представлены на маркетплэйсах в розницу, есть точки продаж
-                                                    по стране, что-то своё
-                                                </div>
-                                                <div className="answers">
-                                                    <div data-v-ac0c8d40="" className="text">
-                                                        <input type="text" placeholder="C кем работаете" className="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">Товарные категории</div>
-                                                <div className="description required">
-                                                    как видите ваше участие: укажите предложение к конкретной коробке или "на ваше усмотрение"
-                                                </div>
-                                                <div className="answers">
-                                                    <div className="text">
-                                                        <input type="text" placeholder="Товарные категории" className="form-control"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">Контактные данные</div>
-                                                <div className="description required">ФИО, сайт, телефон</div>
-                                                <div className="answers">
-                                                    <div className="textarea">
-                                                        <textarea placeholder="Контактные данные" className="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="name required">Документы</div>
-                                                <div className="description required">
-                                                    презентации, коммерческие предложения и т.д.
-                                                </div>
-                                                <div  className="answers">
-                                                    <div className="files">
-                                                        <div className="files">
-                                                            <input type="file" id="files" multiple="multiple"/>
-                                                            <div>
-                                                                <button className="download-button">
-                                                                    + Добавить файлы
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="buttons">
-                                        <button type="button" className="btn btn-primary disabled" disabled="disabled">Отправить</button>
-                                    </div>
+                            <form action="">
+                                <div className="red required">* Обязательно для заполнения</div>
+                                <div className="input-box">
+                                    <span className="details">Название компании* </span>
+                                    <p className="input-title">Правовая форма (ООО, ИП и тд), торговая марка</p>
+                                    <input type="text" placeholder="Название компании" required/>
                                 </div>
-                            </div>
+                                <hr/>
+                                <div className="input-box">
+                                    <span className="details">Регион работы* </span>
+                                    <p className="input-title">конктрентая область, по РФ, страны СНГ</p>
+                                    <input type="text" placeholder="Регион работы" required/>
+                                </div>
+                                <div className="input-box">
+                                    <span className="details">Сроки поставок до склада в г. Москва* </span>
+                                    <p className="input-title">в календарных днях</p>
+                                    <input type="text" placeholder="Сроки поставок до склада в г. Москва" required/>
+                                </div>
+                                <hr/>
+                                <div className="input-box">
+                                    <span className="details">C кем работаете* </span>
+                                    <p className="input-title">оптовые продажи, представлены на маркетплэйсах в розницу, есть точки продаж по стране, что-то своё</p>
+                                    <input type="text" placeholder="C кем работаете" required/>
+                                </div>
+                                <hr/>
+                                <div className="input-box">
+                                    <span className="details">Товарные категории* </span>
+                                    <p className="input-title">как видите ваше участие: укажите предложение к конкретной коробке или "на ваше усмотрение"</p>
+                                    <input type="text" placeholder="Товарные категории" required/>
+                                </div>
+                                <hr/>
+                                <div className="input-box">
+                                    <span className="details">Контактные данные* </span>
+                                    <p className="input-title">ФИО, сайт, телефон</p>
+                                    <input type="text" placeholder="Контактные данные" required/>
+                                </div>
+                                <hr/>
+                                <div className="input-box">
+                                    <span className="details">Документы* </span>
+                                        <div className="files">
+                                            <input type="file" id="files" multiple="multiple" className="hidden"/>
+                                            <div className="files-up">
+                                                <label htmlFor="files">+ Добавить файлы</label>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div className="input-btn">
+                                    <button className="button" type="button">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                         </div>
                     </div>
-                </div>
             </section>
         </Helmet>
     );
