@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from "../../static/img/new_year_logo.png"
 import {Link} from "react-router-dom";
+
 const Header = () => {
     return (
         <header id="header">
