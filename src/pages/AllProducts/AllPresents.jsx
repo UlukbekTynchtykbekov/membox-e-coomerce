@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../../styles/all-products.scss"
 import Helmet from "../../layout/Helmet";
 import CommonRouter from "../../components/CommonRouter";
@@ -7,6 +7,7 @@ import Filter from "../../components/Filter";
 import MainProductsList from "../../components/MainProducts";
 
 const AllPresents = () => {
+    const [activeSort, setActiveSort] = useState(false);
 
     const saleRouters = [
         {
@@ -25,7 +26,7 @@ const AllPresents = () => {
                 <div className="container">
                     <CommonRouter routes={saleRouters} />
                     <CommonTitle title="Подарочные наборы" />
-                    <div className="sticky">
+                    <div onClick={() => setActiveSort(true)} className={ activeSort ? "sticky-active" : "sticky" }>
                         <div className="sticky__top">
                             <div className="filter-button">
                                 <div className="filter-button__flex">
@@ -44,11 +45,7 @@ const AllPresents = () => {
                     </div>
                     <div className="row">
                         <div className="col-3 products-column">
-                            <Filter />
-                            <div className="accept">
-                                    <button type="button" className="accept__btn accept__btn-cancel">Отменить</button>
-                                    <button type="button" className="accept__btn accept__btn--show">Показать</button>
-                            </div>
+                            <Filter activeSort={activeSort} setActiveSort={setActiveSort} />
                         </div>
                         <div className="col-9 products-column">
                             <div className="presents">

@@ -26,32 +26,6 @@
   }
  }
 
-
-.accept{
- position: sticky;
- bottom: 10px;
- z-index: 20;
- padding: 1rem;
- margin: 0 -1rem 1rem;
- background: #fff;
- box-shadow: 0 12px 14px 10px rgb(0 0 0 / 15%);
-
-&__btn{
-  font-weight: 700;
-  line-height: 1.5;
-  padding: 10px 20px;
-  width: 50%;
-  background: #f1f1f1;
-  border-color: #f1f1f1;
- }
-
- &__btn--show{
-  color: #fff;
-  background: #ff4a62;
-  border-color: #ff4a62;
- }
-}
-
  @media(max-width: 990px){
 
   .sticky{
@@ -68,7 +42,7 @@
    align-items: center;
   }
 
-  .accept{
-   display: block;
+  .sticky-active{
+   display: none;
   }
  }
