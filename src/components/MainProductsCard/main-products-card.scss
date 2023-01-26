@@ -162,3 +162,10 @@
     align-items: center;
   }
 }
+
+@media(max-width: 660px){
+  .presents__column{
+    width: 80%;
+    margin: 0 auto;
+  }
+}

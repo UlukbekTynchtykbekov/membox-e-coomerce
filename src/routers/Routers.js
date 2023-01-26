@@ -13,6 +13,7 @@ import SaleDetail from "../pages/SaleDetail";
 import Contacts from "../pages/Contacts";
 import Suppliers from "../pages/Suppliers";
 import AllPresents from "../pages/AllProducts";
+import ProductsDetail from "../pages/ProductDetail";
 
 
 const Routers = () => {
@@ -31,6 +32,7 @@ const Routers = () => {
                 <Route path="/sale/second-box-for-sale" element={<SaleDetail/>}/>
                 <Route path="/contacts" element={<Contacts/>}/>
                 <Route path="/suppliers" element={<Suppliers/>}/>
+                <Route path="/product-detail" element={<ProductsDetail/>}/>
         </Routes>
 }
 export default Routers;

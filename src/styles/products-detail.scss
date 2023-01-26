@@ -1,0 +1,167 @@
+.detail{
+  width: 70%;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__icon{
+    margin: 0 5px 0 0;
+  }
+  &__button{
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+  }
+  &__customer-price{
+    margin: 25px 0 0;
+    display: flex;
+    align-items: center;
+  }
+  &__icon{
+    padding: 0 5px 0 0;
+  }
+  &__text{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0 0;
+    cursor: pointer;
+    border-bottom: 1px dashed #000;
+  }
+  &__price-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price-info{
+    display: flex;
+    flex-direction: column;
+  }
+  &__price{
+    font-size: 38px;
+  }
+  &__installment-price{
+    display: flex;
+    align-items: center;
+  }
+  &__part{
+    padding: 2px 15px;
+    background: #665cff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  &__period{
+    font-size: 14px;
+    color: #707f8d;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+  }
+  &__sostav-block{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+}
+
+.model{
+  padding: 0 0 0 28px;
+  margin: 0 30px 0 0;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  &::before{
+    content: "";
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' class='b5u'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Cpath fill='currentColor' fill-rule='nonzero' d='M11 19.8v-6.71L4 9.175v6.736l7 3.888zm2 0l7-3.888V9.199l-7 3.887V19.8zm3.5-13.656L9.566 9.996l2.431 1.36L18.94 7.5 16.5 6.144zM14.44 5L12 3.644 5.08 7.489l2.433 1.36L14.441 5zm-2.926-3.374a1 1 0 01.972 0L20.97 6.34A2 2 0 0122 8.088v7.824a2 2 0 01-1.029 1.748l-8.485 4.714a1 1 0 01-.972 0L3.03 17.66A2 2 0 012 15.912V8.088A2 2 0 013.029 6.34l8.485-4.714z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+}
+
+.stock{
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.add-to-wishlist{
+  margin: 0 0 0 30px;
+  line-height: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-type{
+  display: flex;
+  font-size: 14px;
+  flex-direction: row-reverse!important;
+  font-weight: 600;
+}
+
+.buttons{
+  align-self: center!important;
+}
+
+.price-block{
+  display: flex!important;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+
+.help{
+  background: #f1f1f1;
+  border: 1px solid #dfdfdf;
+  font-size: 13px;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px;
+  &::before{
+    content: "?";
+    font-weight: 700;
+    color: #a4a4a4;
+  }
+}
+
+.sostav-label{
+  width: 80px;
+  height: 80px;
+  background: #f1f1f1;
+  color: #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.count{
+  line-height: 100%;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px 0 0;
+  font-family: Halvar Engschrift, sans-serif;
+}
+
+.text{
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 10px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 0 0;
+}
