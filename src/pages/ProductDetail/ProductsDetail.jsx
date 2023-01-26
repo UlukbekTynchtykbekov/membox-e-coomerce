@@ -100,50 +100,73 @@ const ProductsDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="detail__price-block">
-                                    <div className="detail__price-installment">
-                                        <div className="price-block">
-                                            <div className="price">6990 р.</div>
-                                            </div>
-                                        <div className="installment-price">
-                                            <div className="part">1747 р.</div>
-                                            <div className="period"> - рассрочка на 8 недель</div>
-                                            <div className="help-button">
-                                                <div>
-                                                    <div className="help"></div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div className="analogs">
                                     <div className="analogs__heading">Похожие наборы:</div>
                                     <div className="analogs__items">
                                         <div className="analogs__item">
                                             <div className="analogs__items-wrapper">
                                                 <div className="analogs__top">Пивовар Box</div>
-                                                <div className="analogs__bottom"><small>6990 р.</small></div>
+                                                <div className="analogs__bottom"><small className="analogs__small">6990 р.</small></div>
                                             </div>
                                         </div>
                                         <div className="analogs__item">
                                             <div className="analogs__items-wrapper">
                                                 <div className="analogs__top">Пивовар Box</div>
-                                                <div className="analogs__bottom"><small>6990 р.</small></div>
+                                                <div className="analogs__bottom"><small className="analogs__small">6990 р.</small></div>
                                             </div>
                                         </div>
                                         <div className="analogs__item">
                                             <div className="analogs__items-wrapper">
                                                 <div className="analogs__top">Пивовар Box</div>
-                                                <div className="analogs__bottom"><small>6990 р.</small></div>
+                                                <div className="analogs__bottom"><small className="analogs__small">6990 р.</small></div>
                                             </div>
                                         </div>
                                         <div className="analogs__item">
                                             <div className="analogs__items-wrapper">
                                                 <div className="analogs__top">Пивовар Box</div>
-                                                <div className="analogs__bottom"><small>6990 р.</small></div>
+                                                <div className="analogs__bottom"><small className="analogs__small">6990 р.</small></div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div className="sticky--top">
+                                    <div className="sticky--top__links">
+                                        <div className="sticky--top__text">💯 гарантия качества</div>
+                                    </div>
+                                    <div className="sticky__actions sticky--top">
+                                        <div className="buttons button-mobile-type">
+                                            <div className="add-to-cart">
+                                                <div className="mobile--type">
+                                                    <div className="outside_cart">
+                                                        <button type="button"
+                                                                className="button sticky--top__button">
+                                                            <span className="add--span">В корзину</span>
+                                                            <div className="price-block sticky--top__price">
+                                                                <div className="price">6990 р.</div>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="shipping">
+                                                <div
+                                                     className="shipping__items">
+                                                    <div className="shipping__icon icon">
+                                                        <svg data-v-1d87fb94="" width="22" height="19"
+                                                             viewBox="0 0 22 19" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                  d="M9.42387 2.07414C9.73899 1.97784 10.073 1.96089 10.3963 2.02479C10.7195 2.08869 11.022 2.23148 11.2768 2.44044C11.5315 2.64941 11.7307 2.91809 11.8566 3.22259C11.9825 3.52709 12.0313 3.85799 11.9985 4.18586C11.9657 4.51373 11.8524 4.82842 11.6687 5.10196C11.4849 5.37549 11.2365 5.5994 10.9454 5.75376C10.6542 5.90813 10.3295 5.98818 10 5.9868H1M12.4239 17.8995C12.739 17.9958 13.073 18.0127 13.3963 17.9488C13.7195 17.8849 14.022 17.7421 14.2768 17.5332C14.5315 17.3242 14.7307 17.0555 14.8566 16.751C14.9825 16.4465 15.0313 16.1156 14.9985 15.7877C14.9657 15.4599 14.8524 15.1452 14.6687 14.8716C14.4849 14.5981 14.2365 14.3742 13.9454 14.2198C13.6542 14.0655 13.3295 13.9854 13 13.9868H1M16.73 5.7168C17.0208 5.42668 17.3787 5.21271 17.7719 5.09381C18.1652 4.97491 18.5816 4.95474 18.9845 5.03508C19.3874 5.11543 19.7642 5.29382 20.0817 5.55447C20.3993 5.81512 20.6477 6.15 20.805 6.52949C20.9623 6.90898 21.0236 7.32139 20.9836 7.73025C20.9436 8.1391 20.8035 8.53179 20.5756 8.8736C20.3477 9.2154 20.0391 9.49578 19.6771 9.68995C19.3151 9.88411 18.9108 9.98606 18.5 9.9868H1"
+                                                                  stroke="#665CFF" strokeWidth="2"
+                                                                  strokeLinecap="round" strokeLinejoin="round"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div className="shipping--text">доставим <span
+                                                        >28.01.2023</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
