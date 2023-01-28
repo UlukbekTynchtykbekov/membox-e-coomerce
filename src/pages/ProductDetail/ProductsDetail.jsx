@@ -6,9 +6,11 @@ import CommonTitle from "../../components/CommonTitle";
 import rightArrow from "../../static/img/arrow-right-line.svg"
 import leftArrow from "../../static/img/arrow-left-line.svg"
 import "../../styles/products-detail.scss"
+import ReadMoreLess from "../../components/ReadMore";
 
 const ProductsDetail = () => {
     const slider = React.useRef(null);
+    const slider2 = React.useRef(null);
 
     const saleRouters = [
         {
@@ -190,8 +192,10 @@ const ProductsDetail = () => {
                                                 <div className="options__text">Добавить к набору</div>
                                             </div>
                                             <div className="arrows">
-                                                <img onClick={() => slider?.current?.slickNext()} className="arrows__arrow" src={leftArrow} alt=""/>
-                                                <img onClick={() => slider?.current?.slickPrev()} className="arrows__arrow" src={rightArrow} alt=""/>
+                                                <img onClick={() => slider?.current?.slickNext()}
+                                                     className="arrows__arrow" src={leftArrow} alt=""/>
+                                                <img onClick={() => slider?.current?.slickPrev()}
+                                                     className="arrows__arrow" src={rightArrow} alt=""/>
                                             </div>
                                         </div>
                                         <div className="tabs options__tabs">
@@ -297,9 +301,10 @@ const ProductsDetail = () => {
                                     </div>
                                 </div>
                                 <div className="delivery">
-                                    <div  className="delivery__address">
+                                    <div className="delivery__address">
                                         <div className="delivery__title">Ваш город:</div>
-                                        <div className="deliver__city"><span className="delivery__span">Нижний Новгород</span>
+                                        <div className="deliver__city"><span
+                                            className="delivery__span">Нижний Новгород</span>
                                         </div>
                                     </div>
                                     <div className="shipping delivery-shippping">
@@ -315,22 +320,40 @@ const ProductsDetail = () => {
                                             </div>
                                             <div className="text">
                                                 <p className="shipping--text">
-                                                Курьер доставит до двери <b>30.01.2023</b></p>
+                                                    Курьер доставит до двери <b>30.01.2023</b></p>
                                                 <p className="shipping--text">
-                                                Доставим в <a className="delivery--point">пункт самовывоза</a> <b>30.01.2023</b></p></div>
+                                                    Доставим в <a className="delivery--point">пункт самовывоза</a>
+                                                    <b>30.01.2023</b></p></div>
                                         </div>
                                         <div className="shipping__item delivery-shippping-item">
                                             <div className="icon shipping__icon">
-                                                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3633 5.31818V10.5" stroke="#665CFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M16.5451 13.0909L11.3633 10.5" stroke="#665CFF" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M5.42969 8H1.42969V3" stroke="#665CFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M4.66078 17.2175C5.98818 18.5461 7.67939 19.4509 9.52054 19.8175C11.3617 20.184 13.2701 19.9959 15.0044 19.2769C16.7388 18.5578 18.2211 17.3402 19.264 15.7779C20.307 14.2157 20.8636 12.3789 20.8636 10.5C20.8636 8.62108 20.307 6.78435 19.264 5.22208C18.2211 3.65982 16.7388 2.44218 15.0044 1.72315C13.2701 1.00412 11.3617 0.815985 9.52054 1.18254C7.67939 1.5491 5.98818 2.45389 4.66078 3.78249L1.5 7.5" stroke="#665CFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+                                                <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.3633 5.31818V10.5" stroke="#665CFF" strokeWidth="2"
+                                                          strokeLinecap="round" strokeLinejoin="round"></path>
+                                                    <path d="M16.5451 13.0909L11.3633 10.5" stroke="#665CFF"
+                                                          stroke-width="2" strokeLinecap="round"
+                                                          strokeLinejoin="round"></path>
+                                                    <path d="M5.42969 8H1.42969V3" stroke="#665CFF" strokeWidth="2"
+                                                          strokeLinecap="round" strokeLinejoin="round"></path>
+                                                    <path
+                                                        d="M4.66078 17.2175C5.98818 18.5461 7.67939 19.4509 9.52054 19.8175C11.3617 20.184 13.2701 19.9959 15.0044 19.2769C16.7388 18.5578 18.2211 17.3402 19.264 15.7779C20.307 14.2157 20.8636 12.3789 20.8636 10.5C20.8636 8.62108 20.307 6.78435 19.264 5.22208C18.2211 3.65982 16.7388 2.44218 15.0044 1.72315C13.2701 1.00412 11.3617 0.815985 9.52054 1.18254C7.67939 1.5491 5.98818 2.45389 4.66078 3.78249L1.5 7.5"
+                                                        stroke="#665CFF" strokeWidth="2" strokeLinecap="round"
+                                                        strokeLinejoin="round"></path>
+                                                </svg>
                                             </div>
-                                            <div className="text"><p className="shipping--text">Безопасная онлайн-оплата и возврат (До 30 дней на
+                                            <div className="text"><p className="shipping--text">Безопасная онлайн-оплата
+                                                и возврат (До 30 дней на
                                                 возврат, полная гарантия)</p></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="descriptions">
-                                    <div className="title descriptions__items"><h2 className="descriptions__title">Описание</h2></div>
-                                    <div className="context description__content"><p className="subtitle descriptions__subtitle">Внутри каждого мужчины живет романтик, который хочет
+                                    <div className="title descriptions__items"><h2
+                                        className="descriptions__title">Описание</h2></div>
+                                    <div className="context description__content"><p
+                                        className="subtitle descriptions__subtitle">Внутри каждого мужчины живет
+                                        романтик, который хочет
                                         открыть свой небольшой бар в центре большого города. Исполните его мечту —
                                         подарите мужчине бар в миниатюре с набором «Бармен Box XL».</p></div>
                                 </div>
@@ -341,7 +364,8 @@ const ProductsDetail = () => {
                                                 <div className="image items__image"><img
                                                     src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-120x120.webp"
                                                     alt="самый необычный подарок" className="img--fluid"/></div>
-                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет самым
+                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет
+                                                    самым
                                                     необычным на празднике
                                                 </div>
                                             </div>
@@ -351,7 +375,8 @@ const ProductsDetail = () => {
                                                 <div className="image items__image"><img
                                                     src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-120x120.webp"
                                                     alt="самый необычный подарок" className="img--fluid"/></div>
-                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет самым
+                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет
+                                                    самым
                                                     необычным на празднике
                                                 </div>
                                             </div>
@@ -361,7 +386,8 @@ const ProductsDetail = () => {
                                                 <div className="image items__image"><img
                                                     src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-120x120.webp"
                                                     alt="самый необычный подарок" className="img--fluid"/></div>
-                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет самым
+                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет
+                                                    самым
                                                     необычным на празднике
                                                 </div>
                                             </div>
@@ -371,7 +397,8 @@ const ProductsDetail = () => {
                                                 <div className="image items__image"><img
                                                     src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-120x120.webp"
                                                     alt="самый необычный подарок" className="img--fluid"/></div>
-                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет самым
+                                                <div className="items__title"><b>Выделяйтесь!</b> Ваш подарок будет
+                                                    самым
                                                     необычным на празднике
                                                 </div>
                                             </div>
@@ -379,59 +406,140 @@ const ProductsDetail = () => {
                                     </div>
                                 </div>
                                 <div className="composition">
-                                    <div className="composition__title-block">
-                                        <h2 className="composition__title">Состав набора (14)
-                                        </h2>
-                                    </div>
                                     <div className="composition__items">
-                                        <div className="composition__item">
-                                            <div className="title">Шейкер Кобблер металлический (480
-                                                мл)
+                                        <ReadMoreLess>
+                                            <div className="composition__item">
+                                                <div className="title title-color">Шейкер Кобблер металлический (480
+                                                    мл)
+                                                </div>
+                                                <div className="text text-font">Смешивает красиво и
+                                                    профессионально. Цвет серебристый или медный.
+                                                </div>
                                             </div>
-                                            <div className="text">Смешивает красиво и
-                                                профессионально. Цвет серебристый или медный.
+                                            <div className="composition__item">
+                                                <div className="title title-color">Шейкер Кобблер металлический (480
+                                                    мл)
+                                                </div>
+                                                <div className="text text-font">Смешивает красиво и
+                                                    профессионально. Цвет серебристый или медный.
+                                                </div>
+                                            </div>
+                                            <div className="composition__item">
+                                                <div className="title title-color">Шейкер Кобблер металлический (480
+                                                    мл)
+                                                </div>
+                                                <div className="text text-font">Смешивает красиво и
+                                                    профессионально. Цвет серебристый или медный.
+                                                </div>
+                                            </div>
+                                            <div className="composition__item">
+                                                <div className="title title-color">Шейкер Кобблер металлический (480
+                                                    мл)
+                                                </div>
+                                                <div className="text text-font">Смешивает красиво и
+                                                    профессионально. Цвет серебристый или медный.
+                                                </div>
+                                            </div>
+                                            <div className="composition__item">
+                                                <div className="title title-color">Шейкер Кобблер металлический (480
+                                                    мл)
+                                                </div>
+                                                <div className="text text-font">Смешивает красиво и
+                                                    профессионально. Цвет серебристый или медный.
+                                                </div>
+                                            </div>
+                                        </ReadMoreLess>
+                                    </div>
+                                </div>
+                                <div className="checkout">
+                                    <div className="checkout__block">
+                                        <div className="checkout__heading">
+                                            <div className="checkout__title">🔥
+                                                ВЫБОР ПОКУПАТЕЛЕЙ
+                                            </div>
+                                            <div className="arrows">
+                                                <img onClick={() => slider2?.current?.slickNext()}
+                                                     className="arrows__arrow" src={leftArrow} alt=""/>
+                                                <img onClick={() => slider2?.current?.slickPrev()}
+                                                     className="arrows__arrow" src={rightArrow} alt=""/>
                                             </div>
                                         </div>
-                                        <div className="composition__item">
-                                            <div className="title">Шейкер Кобблер металлический (480
-                                                мл)
-                                            </div>
-                                            <div className="text">Смешивает красиво и
-                                                профессионально. Цвет серебристый или медный.
-                                            </div>
+                                        <div className="slides">
+                                            <Slider ref={slider2} {...settings}>
+                                                <div className="slider__slide">
+                                                    <div className="slider__item">
+                                                        <div className="top">
+                                                            <div className="top__photo">
+                                                                <div className="image">
+                                                                    <img className="img"
+                                                                         src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
+                                                                         alt=""/>
+                                                                </div>
+                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                            </div>
+                                                            <div className="presents__price">
+                                                                <div className="presents__price-number slider__price">6990 р.</div>
+                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="slider__slide">
+                                                    <div className="slider__item">
+                                                        <div className="top">
+                                                            <div className="top__photo">
+                                                                <div className="image">
+                                                                    <img className="img"
+                                                                         src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
+                                                                         alt=""/>
+                                                                </div>
+                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                            </div>
+                                                            <div className="presents__price">
+                                                                <div className="presents__price-number slider__price">6990 р.</div>
+                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="slider__slide">
+                                                    <div className="slider__item">
+                                                        <div className="top">
+                                                            <div className="top__photo">
+                                                                <div className="image">
+                                                                    <img className="img"
+                                                                         src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
+                                                                         alt=""/>
+                                                                </div>
+                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                            </div>
+                                                            <div className="presents__price">
+                                                                <div className="presents__price-number slider__price">6990 р.</div>
+                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="slider__slide">
+                                                    <div className="slider__item">
+                                                        <div className="top">
+                                                            <div className="top__photo">
+                                                                <div className="image">
+                                                                    <img className="img"
+                                                                         src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
+                                                                         alt=""/>
+                                                                </div>
+                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                            </div>
+                                                            <div className="presents__price">
+                                                                <div className="presents__price-number slider__price">6990 р.</div>
+                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Slider>
                                         </div>
-                                        <div className="composition__item">
-                                            <div className="title">Шейкер Кобблер металлический (480
-                                                мл)
-                                            </div>
-                                            <div className="text">Смешивает красиво и
-                                                профессионально. Цвет серебристый или медный.
-                                            </div>
-                                        </div>
-                                        <div className="composition__item">
-                                            <div className="title">Шейкер Кобблер металлический (480
-                                                мл)
-                                            </div>
-                                            <div className="text">Смешивает красиво и
-                                                профессионально. Цвет серебристый или медный.
-                                            </div>
-                                        </div>
-                                        <div className="composition__item">
-                                            <div className="title">Шейкер Кобблер металлический (480
-                                                мл)
-                                            </div>
-                                            <div className="text">Смешивает красиво и
-                                                профессионально. Цвет серебристый или медный.
-                                            </div>
-                                        </div>
-                                        <div className="show-tabs"><a data-v-5dcca71a="">
-                                            Посмотреть все товары в наборе
-                                            <svg  width="10" height="6" viewBox="0 0 10 6" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1L5 5L9 1" stroke="black"
-                                                      strokeWidth="2" strokeLinecap="round"
-                                                      strokeLinejoin="round"></path>
-                                            </svg></a></div>
                                     </div>
                                 </div>
                             </div>
