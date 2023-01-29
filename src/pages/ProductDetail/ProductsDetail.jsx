@@ -7,10 +7,12 @@ import rightArrow from "../../static/img/arrow-right-line.svg"
 import leftArrow from "../../static/img/arrow-left-line.svg"
 import "../../styles/products-detail.scss"
 import ReadMoreLess from "../../components/ReadMore";
+import Process from "../../components/Process";
 
 const ProductsDetail = () => {
     const slider = React.useRef(null);
     const slider2 = React.useRef(null);
+    const slider3 = React.useRef(null);
 
     const saleRouters = [
         {
@@ -32,6 +34,12 @@ const ProductsDetail = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
+        slidesToScroll: 1
+    }
+    const slideshowSettings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1.5,
         slidesToScroll: 1
     }
     return (
@@ -625,7 +633,11 @@ const ProductsDetail = () => {
                                 <div className="slideshow">
                                     <div className="slideshow__images">
                                         <div className="slideshow__container">
-                                            <Slider {...settings}>
+                                            <Slider ref={slider3} {...slideshowSettings}>
+                                                <div className="slideshow__slide">
+                                                    <img className="img-fluid slideshow__img"
+                                                         src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-750x750.webp"/>
+                                                </div>
                                                 <div className="slideshow__slide">
                                                     <img className="img-fluid slideshow__img"
                                                          src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-750x750.webp"/>
@@ -641,9 +653,9 @@ const ProductsDetail = () => {
                                             </Slider>
                                         </div>
                                         <div className="arrows slideshow__arrows">
-                                            <img onClick={() => slider2?.current?.slickNext()}
+                                            <img onClick={() => slider3?.current?.slickNext()}
                                                  className="arrows__arrow" src={leftArrow} alt=""/>
-                                            <img onClick={() => slider2?.current?.slickPrev()}
+                                            <img onClick={() => slider3?.current?.slickPrev()}
                                                  className="arrows__arrow" src={rightArrow} alt=""/>
                                         </div>
                                     </div>
@@ -653,6 +665,47 @@ const ProductsDetail = () => {
                     </div>
                 </div>
             </section>
+            <section className="statistic">
+                <div className="container">
+                    <div className="counter">
+                        <div className="row">
+                            <div className="col-3">
+                                <div className="counter__items">
+                                    <div className="item counter__item">
+                                        <div className="title counter__title">65 000+</div>
+                                        <div className="text counter__text">мужчин получили тот самый подарок</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-3">
+                                <div className="counter__items">
+                                    <div className="item counter__item">
+                                        <div className="title counter__title">100+</div>
+                                        <div className="text counter__text">продуманных готовых наборов</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-3">
+                                <div className="counter__items">
+                                    <div className="item counter__item">
+                                        <div className="title counter__title">300+</div>
+                                        <div className="text counter__text">товаров для сборки своего набора</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-3">
+                                <div className="counter__items">
+                                    <div className="item counter__item">
+                                        <div className="title counter__title">91%</div>
+                                        <div className="text counter__text">покупателей ставят от 8 до 10 баллов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Process/>
         </Helmet>
     );
 };

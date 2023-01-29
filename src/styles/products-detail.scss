@@ -1,5 +1,5 @@
 .detail {
-  width: 70%;
+  width: 80%;
 
   &__wrapper {
     display: flex;
@@ -627,11 +627,41 @@ button{
     z-index: 1;
   }
   &__slide{
-    margin-right: 30px;
+    margin: 0 196px;
     width: 70%;
   }
   &__img{
-    width: 100%;
+    width: 95%;
+  }
+  &__arrows{
+    margin-top: 20px;
+    justify-content: space-between;
   }
 }
 
+.counter{
+  margin: 70px 0;
+  &__items{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #665cff;
+  }
+
+  &__item{
+    color: #fff;
+    padding: 75px 30px 75px 50px;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  &__text{
+    margin: 0;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+}
