@@ -475,11 +475,17 @@ const ProductsDetail = () => {
                                                                          src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
                                                                          alt=""/>
                                                                 </div>
-                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                                <div className="name">Виски Box Только для взрослых
+                                                                </div>
                                                             </div>
                                                             <div className="presents__price">
-                                                                <div className="presents__price-number slider__price">6990 р.</div>
-                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                                <div
+                                                                    className="presents__price-number slider__price">6990
+                                                                    р.
+                                                                </div>
+                                                                <div className="presents__old-price slider__price">3990
+                                                                    р
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -493,11 +499,17 @@ const ProductsDetail = () => {
                                                                          src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
                                                                          alt=""/>
                                                                 </div>
-                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                                <div className="name">Виски Box Только для взрослых
+                                                                </div>
                                                             </div>
                                                             <div className="presents__price">
-                                                                <div className="presents__price-number slider__price">6990 р.</div>
-                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                                <div
+                                                                    className="presents__price-number slider__price">6990
+                                                                    р.
+                                                                </div>
+                                                                <div className="presents__old-price slider__price">3990
+                                                                    р
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -511,11 +523,17 @@ const ProductsDetail = () => {
                                                                          src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
                                                                          alt=""/>
                                                                 </div>
-                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                                <div className="name">Виски Box Только для взрослых
+                                                                </div>
                                                             </div>
                                                             <div className="presents__price">
-                                                                <div className="presents__price-number slider__price">6990 р.</div>
-                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                                <div
+                                                                    className="presents__price-number slider__price">6990
+                                                                    р.
+                                                                </div>
+                                                                <div className="presents__old-price slider__price">3990
+                                                                    р
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -529,11 +547,17 @@ const ProductsDetail = () => {
                                                                          src="https://manbox.ru/image/cachewebp/catalog/products/%21%2018x18x18%20sm/Wisky%2010822/DSC_4889_1-200x200.webp"
                                                                          alt=""/>
                                                                 </div>
-                                                                <div className="name">Виски Box Только для взрослых</div>
+                                                                <div className="name">Виски Box Только для взрослых
+                                                                </div>
                                                             </div>
                                                             <div className="presents__price">
-                                                                <div className="presents__price-number slider__price">6990 р.</div>
-                                                                <div className="presents__old-price slider__price">3990 р</div>
+                                                                <div
+                                                                    className="presents__price-number slider__price">6990
+                                                                    р.
+                                                                </div>
+                                                                <div className="presents__old-price slider__price">3990
+                                                                    р
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -542,10 +566,89 @@ const ProductsDetail = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="packing">
+                                    <div className="title">
+                                        <h2 className="packing__title">Упаковка</h2>
+                                    </div>
+                                    <div className="text packing__text">Благодаря нашей трехуровневой защите, ваш
+                                        набор доставят в сохранности
+                                    </div>
+                                    <div className="items packing__items">
+                                        <div className="packing__item"><span className="packing__span">01.</span> в
+                                            деревянном ящике с ломом
+                                        </div>
+                                        <div className="packing__item"><span className="packing__span">02.</span> внутри
+                                            пенопластовый наполнитель
+                                        </div>
+                                        <div className="packing__item"><span className="packing__span">03.</span> в
+                                            дополнительной транспортной коробке
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="story">
+                                    <div className="title">
+                                        <h2 className="story__title">Почему стоит подарить</h2>
+                                    </div>
+                                    <div className="text story__text"><p className="story__info">Представьте: томный
+                                        вечер, полутемный бар, несколько
+                                        посетителей за барной стойкой лениво рассказывают свои истории. Романтика. И
+                                        главный герой этого вечера — мужчина с набором «Бармен Box XL», а бар — это его
+                                        квартира, а гости — это вы.</p><h2 className="story__mix">НЕТ НИЧЕГО ЛУЧШЕ, ЧЕМ
+                                        СМЕШИВАТЬ</h2>
+                                        <p className="story__info">В набор входят все необходимые инструменты для
+                                            приготовления коктейлей —
+                                            профессиональные, красивые, впечатляющие. К нему прилагается коктейльная
+                                            карта с рецептами и сиропами. Можно следовать правилам, а можно смешивать
+                                            по-своему. Кому как нравится. Фантазия ничем не ограничена, но все-таки
+                                            творите и употребляйте с умом. Набор «Бармен Box XL» включает в
+                                            себя</p><p className="story__info">●<span>	</span>Профессионализм.
+                                            Барменами не рождаются – ими становятся, особенно если под рукой все
+                                            необходимые инструменты.</p><p className="story__info">●<span>	</span>Креативность.
+                                            Подарок развивает фантазию
+                                            и чувствительность вкусовых сосочков.</p><p>●<span>	</span>Популярность.
+                                            К набору прилагается звание
+                                            короля вечеринок.</p><p className="story__info">●<span>	</span>Вкус к
+                                            знаниям. Посвящает в тонкое искусство миксологии.</p><p
+                                            className="story__info">●<span>	</span>Эмоции. От процесса приготовления,
+                                            а после — от процесса потребления.</p><p className="story__info">Заказывайте
+                                            на сайте
+                                            manbox.ru, потому что только здесь есть пьянящее разнообразие
+                                            выбора. </p><p className="story__info">Каждый подарок мужчине — это мечта,
+                                            заботливо упакованная в деревянный ящик с ломом.</p><p
+                                            className="story__info">Доставка по
+                                            всей России.</p></div>
+                                </div>
                             </div>
                         </div>
                         <div className="col-6">
-
+                            <div className="sticky--top">
+                                <div className="slideshow">
+                                    <div className="slideshow__images">
+                                        <div className="slideshow__container">
+                                            <Slider {...settings}>
+                                                <div className="slideshow__slide">
+                                                    <img className="img-fluid slideshow__img"
+                                                         src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-750x750.webp"/>
+                                                </div>
+                                                <div className="slideshow__slide">
+                                                    <img className="img-fluid slideshow__img"
+                                                         src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-750x750.webp"/>
+                                                </div>
+                                                <div className="slideshow__slide">
+                                                    <img className="img-fluid slideshow__img"
+                                                         src="https://manbox.ru/image/cachewebp/catalog/products/Barmen/DSC_3491_1-750x750.webp"/>
+                                                </div>
+                                            </Slider>
+                                        </div>
+                                        <div className="arrows slideshow__arrows">
+                                            <img onClick={() => slider2?.current?.slickNext()}
+                                                 className="arrows__arrow" src={leftArrow} alt=""/>
+                                            <img onClick={() => slider2?.current?.slickPrev()}
+                                                 className="arrows__arrow" src={rightArrow} alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
