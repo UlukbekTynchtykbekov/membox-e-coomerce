@@ -29,4 +29,68 @@
     text-transform: uppercase;
     font-size: 14px;
   }
+  &__plus{
+    padding: 10px 15px;
+    background: #665cff;
+    color: #fff;
+    margin: 0 15px 0 0;
+  }
+  &__process{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  &__text{
+    margin: 0;
+    text-align: start;
+    font-weight: 500;
+    width: 60%;
+    font-size: 11px;
+    line-height: 18px;
+  }
+  &__form{
+    margin: 30px 0 0;
+  }
+  &__input{
+    width: 30%;
+  }
+  &__label{
+    font-weight: 700;
+  }
+  &__form-control{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  &__button{
+    padding: 0 0 0 20px;
+  }
+  &__btn{
+    border-radius: 0;
+    border: none;
+    padding: 20px 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+    color: #dfdfdf;
+    &:hover{
+      background: #665cff;
+    }
+  }
+}
+
+.form{
+  display: flex;
+  align-items: end;
 }

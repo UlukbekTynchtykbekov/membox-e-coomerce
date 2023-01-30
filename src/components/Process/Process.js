@@ -15,13 +15,13 @@ const Process = () => {
                     <div className="text magnet__text">Мы подготовили список классных идей как сделать самый главный день своего
                         любимого человека запоминающимся. На какую почту вам прислать этот чудо-файл?
                     </div>
-                    <div className="form">
-                        <div className="input">
-                            <label>Ваш email</label>
-                            <input type="text" placeholder="Ваш email" className="form-control"/>
+                    <div className="form magnet__form">
+                        <div className="input magnet__input">
+                            <label className="magnet__label">Ваш email</label>
+                            <input type="text" placeholder="Ваш email" className="form-control magnet__form-control"/>
                         </div>
-                        <div className="button">
-                            <button type="submit" className="btn">Получить бесплатно</button>
+                        <div className="btn magnet__button">
+                            <button type="submit" className="button magnet__btn">Получить бесплатно</button>
                         </div>
                     </div>
                 </div>
