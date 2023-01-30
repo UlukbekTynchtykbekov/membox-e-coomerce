@@ -8,6 +8,7 @@ import leftArrow from "../../static/img/arrow-left-line.svg"
 import "../../styles/products-detail.scss"
 import ReadMoreLess from "../../components/ReadMore";
 import Process from "../../components/Process";
+import Review from "../../components/Review";
 
 const ProductsDetail = () => {
     const slider = React.useRef(null);
@@ -706,6 +707,7 @@ const ProductsDetail = () => {
                 </div>
             </section>
             <Process/>
+            <Review/>
         </Helmet>
     );
 };
