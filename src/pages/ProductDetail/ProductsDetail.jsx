@@ -9,6 +9,7 @@ import "../../styles/products-detail.scss"
 import ReadMoreLess from "../../components/ReadMore";
 import Process from "../../components/Process";
 import Review from "../../components/Review";
+import MainProductsList from "../../components/MainProducts";
 
 const ProductsDetail = () => {
     const slider = React.useRef(null);
@@ -31,25 +32,42 @@ const ProductsDetail = () => {
         },
     ]
 
-    const settings = {
+    let settings = {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 771,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+        ]
     }
-    const slideshowSettings = {
+    let slideshowSettings = {
         infinite: true,
         speed: 500,
         slidesToShow: 1.5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    dots: true,
+                    slidesToShow: 1,
+                },
+            },
+        ]
     }
     return (
         <Helmet title="Products Detail">
             <section className="products-detail">
                 <div className="container">
                     <CommonRouter routes={saleRouters}/>
-                    <div className="row">
-                        <div className="col-6">
+                    <div className="row detail-row">
+                        <div className="col-6 detail-column">
                             <CommonTitle title="БОЛЬШОЙ НАБОР БАРМЕНА «БАРМЕН BOX XL»"/>
                             <div className="detail">
                                 <div className="detail__wrapper">
@@ -229,7 +247,8 @@ const ProductsDetail = () => {
                                                             <div className="price">99 р.</div>
                                                         </div>
                                                         <div className="buttons">
-                                                            <button type="button">Добавить</button>
+                                                            <button type="button" className="top__button">Добавить
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -247,7 +266,8 @@ const ProductsDetail = () => {
                                                             <div className="price">99 р.</div>
                                                         </div>
                                                         <div className="buttons">
-                                                            <button type="button top__button">Добавить</button>
+                                                            <button type="button" className="top__button">Добавить
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -265,7 +285,8 @@ const ProductsDetail = () => {
                                                             <div className="price">99 р.</div>
                                                         </div>
                                                         <div className="buttons">
-                                                            <button type="button top__button">Добавить</button>
+                                                            <button type="button" className="top__button">Добавить
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -283,7 +304,8 @@ const ProductsDetail = () => {
                                                             <div className="price">99 р.</div>
                                                         </div>
                                                         <div className="buttons">
-                                                            <button type="button top__button">Добавить</button>
+                                                            <button type="button" className="top__button">Добавить
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -301,7 +323,8 @@ const ProductsDetail = () => {
                                                             <div className="price">99 р.</div>
                                                         </div>
                                                         <div className="buttons">
-                                                            <button type="button top__button">Добавить</button>
+                                                            <button type="button" className="top__button">Добавить
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -629,7 +652,7 @@ const ProductsDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
+                        <div className="col-6 detail-column">
                             <div className="sticky--top">
                                 <div className="slideshow">
                                     <div className="slideshow__images">
@@ -670,7 +693,7 @@ const ProductsDetail = () => {
                 <div className="container">
                     <div className="counter">
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-3 statistic-column">
                                 <div className="counter__items">
                                     <div className="item counter__item">
                                         <div className="title counter__title">65 000+</div>
@@ -678,7 +701,7 @@ const ProductsDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-3">
+                            <div className="col-3 statistic-column">
                                 <div className="counter__items">
                                     <div className="item counter__item">
                                         <div className="title counter__title">100+</div>
@@ -686,7 +709,7 @@ const ProductsDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-3">
+                            <div className="col-3 statistic-column">
                                 <div className="counter__items">
                                     <div className="item counter__item">
                                         <div className="title counter__title">300+</div>
@@ -694,7 +717,7 @@ const ProductsDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-3">
+                            <div className="col-3 statistic-column">
                                 <div className="counter__items">
                                     <div className="item counter__item">
                                         <div className="title counter__title">91%</div>
@@ -708,6 +731,16 @@ const ProductsDetail = () => {
             </section>
             <Process/>
             <Review/>
+            <section className="recommended">
+                <div className="container">
+                    <CommonTitle title="ПОХОЖИЕ ПОДАРОЧНЫЕ НАБОРЫ"/>
+                    <div className="row">
+                        <div className="presents">
+                            <MainProductsList/>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </Helmet>
     );
 };

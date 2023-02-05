@@ -20,7 +20,7 @@ const Process = () => {
                             <label className="magnet__label">Ваш email</label>
                             <input type="text" placeholder="Ваш email" className="form-control magnet__form-control"/>
                         </div>
-                        <div className="btn magnet__button">
+                        <div className="magnet__button">
                             <button type="submit" className="button magnet__btn">Получить бесплатно</button>
                         </div>
                     </div>

@@ -390,6 +390,12 @@
 .top{
   border: 2px solid transparent;
   border-radius: 5px 5px 0 0;
+  &__button{
+    &:hover{
+      background-color: #665cff;
+      color: #dfdfdf;
+    }
+  }
 }
 
 .image{
@@ -663,5 +669,59 @@ button{
     font-size: 13px;
     line-height: 24px;
     font-weight: 500;
+  }
+}
+
+
+@media(max-width: 990px){
+  .detail-row{
+    flex-direction: column-reverse;
+  }
+  .detail-column{
+    width: 100%;
+  }
+  .slideshow {
+    width: 100%;
+    &__slide {
+      margin: 0 30px;
+    }
+  }
+  .slick-dots {
+    position: initial;
+  }
+  .detail {
+    width: 100%;
+  }
+  .statistic-column{
+    width: 50%;
+    margin: 20px 0;
+  }
+  .counter {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media(max-width: 620px){
+  .counter{
+    &__title {
+      font-size: 1.6rem;
+    }
+    &__text {
+      font-size: 11px;
+    }
+  }
+  .magnet{
+    &__input {
+      width: 90%!important;
+      margin: 20px auto;
+    }
+    &__form {
+      display: block!important;
+    }
+    &__button{
+      padding: 0;
+    }
   }
 }
