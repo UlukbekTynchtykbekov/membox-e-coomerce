@@ -30,8 +30,8 @@
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0;
     outline: none;
+    padding: 16px 30px;
     border: 0;
     background: transparent;
   }
@@ -160,5 +160,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media(max-width: 660px){
+  .presents__column{
+    width: 80%;
+    margin: 0 auto;
   }
 }

@@ -4,12 +4,12 @@ import thumbUp from "../../static/img/like.png";
 import close from "../../static/img/close-line.svg"
 import './filter.scss';
 
-const Filter = () => {
+const Filter = ({activeSort, setActiveSort}) => {
     return (
-        <div className="sort">
+        <div className={activeSort ? "sort-active" : "sort"}>
             <div className="sort__top-items">
                 <div className="sort__title">Фильтры</div>
-                <div className="sort__close"><img className="sort__close-btn" src={close} alt=""/></div>
+                <div onClick={() => setActiveSort(false)} className="sort__close"><img className="sort__close-btn" src={close} alt=""/></div>
             </div>
             <div className="sort__items">
                 <div className="sort__item">
@@ -205,6 +205,10 @@ const Filter = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="accept">
+                <button type="button" className="accept__btn accept__btn-cancel">Отменить</button>
+                <button type="button" className="accept__btn accept__btn--show">Показать</button>
             </div>
         </div>
     );
