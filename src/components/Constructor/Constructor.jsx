@@ -652,8 +652,8 @@ const Constructor = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="button" onClick={() => setKit(false)}>
-                                <div className="modal-close">
+                            <div className="button right__close-btn" onClick={() => setKit(false)}>
+                                <div className="modal-close right-close">
                                     <a className="close--btn">
                                         <img className="close--icon" src={closeIcon} alt=""/>
                                     </a>

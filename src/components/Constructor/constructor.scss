@@ -247,6 +247,9 @@
     text-transform: uppercase;
     line-height: 1;
   }
+  &__close-btn{
+    display: none!important;
+  }
 }
 
 .open {
@@ -566,7 +569,7 @@
 
     &__top--transform {
       position: fixed;
-      bottom: 275px;
+      bottom: 224px;
       left: 0;
       background-color: #f1f1f1;
       padding: 15px 12px 20px;
@@ -611,6 +614,9 @@
     &__close {
       width: auto;
     }
+    &__close-btn{
+      display: block!important;
+    }
   }
   .products {
     margin: 0;
@@ -645,8 +651,7 @@
     width: 67%;
   }
   .checkout {
-    margin-top: 0;
-
+    margin-top: 0!important;
     &__error--block {
       display: none;
     }

@@ -28,16 +28,16 @@ const Header = () => {
                                         <ul>
                                             <li><Link  className="open" to="/sale"> Акции</Link></li>
                                             <li><Link className="open" to="/set-constructor">Конструктор набора</Link></li>
-                                            <li><Link className="open" to="/home">Все подарки</Link></li>
+                                            <li><Link className="open" to="/all-products">Все подарки</Link></li>
                                             <li><Link className="open" to="/vip">VIP-наборы</Link></li>
                                             <li><Link className="open" to="/home">Бар</Link></li>
-                                            <li><Link className="open" to="/home">Гастрономия</Link></li>
-                                            <li><Link className="open" to="/home">Сделай сам</Link></li>
+                                            <li><Link className="open" to="/gastro">Гастрономия</Link></li>
+                                            <li><Link className="open" to="/diy">Сделай сам</Link></li>
                                             <li><Link className="open" to="/stock">🔥Распродажа</Link></li>
                                             <li><Link className="open" to="/novelties">Новинки</Link></li>
                                             <li><Link className="open" to="/home">Туризм и отдых</Link></li>
-                                            <li><Link className="open" to="/home">Развлечения</Link></li>
-                                            <li><Link className="open" to="/home">Баня</Link></li>
+                                            <li><Link className="open" to="/entertainment">Развлечения</Link></li>
+                                            <li><Link className="open" to="/bathhouse">Баня</Link></li>
                                         </ul>
                                         <div className="vr"></div>
                                         <ul>
@@ -96,11 +96,11 @@ const Header = () => {
                 <div className="row-bottom">
                     <nav>
                         <ul className="d">
-                            <li className="nav-item flex-fill"><Link className="" to="/ready-made">Готовые наборы</Link></li>
+                            <li className="nav-item flex-fill"><Link className="" to="/all-products">Готовые наборы</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/set-constructor">Конструктор набора</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/novelties">Новинки</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/vip">VIP-наборы</Link></li>
-                            <li className="nav-item flex-fill"><Link className="" to="/stock">🔥Акции</Link></li>
+                            <li className="nav-item flex-fill"><Link className="" to="/sale">🔥Акции</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/certificate">Сертификат</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/delivery">Доставка</Link></li>
                             <li className="nav-item flex-fill"><Link className="" to="/corporate-gifts">Корпоративные подарки</Link></li>

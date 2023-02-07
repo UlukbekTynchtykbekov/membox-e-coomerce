@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
+import Helmet from "../../layout/Helmet";
 import CommonRouter from "../../components/CommonRouter";
 import CommonTitle from "../../components/CommonTitle";
 import Filter from "../../components/Filter";
 import MainProductsList from "../../components/MainProducts";
-import Helmet from "../../layout/Helmet";
 
-const ViPsets = () => {
+const BathHouse = () => {
     const [activeSort, setActiveSort] = useState(false);
 
     const saleRouters = [
@@ -14,16 +14,17 @@ const ViPsets = () => {
             title: "Главная"
         },
         {
-            route: "vip-sets",
-            title: "VIP-НАБОРЫ"
+            route: "bathhouse",
+            title: "Баня"
         },
     ]
+
     return (
-        <Helmet title="VIP-НАБОРЫ">
+        <Helmet title="БАНЯ">
             <section className="all-products">
                 <div className="container">
                     <CommonRouter routes={saleRouters} />
-                    <CommonTitle title="VIP-НАБОРЫ" />
+                    <CommonTitle title="БАНЯ" />
                     <div onClick={() => setActiveSort(true)} className={ activeSort ? "sticky-active" : "sticky" }>
                         <div className="sticky__top">
                             <div className="filter-button">
@@ -57,4 +58,4 @@ const ViPsets = () => {
     );
 };
 
-export default ViPsets;
+export default BathHouse;
