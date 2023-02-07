@@ -29,8 +29,8 @@ const Modal = ({ active, setActive }) => {
                                     </div>
                                 </div>
                                 <div className="fastview modal__fastview">
-                                    <div className="row">
-                                        <div className="col-6">
+                                    <div className="row modal__row">
+                                        <div className="col-6 modal__column">
                                             <div className="fastview__model">Код товара: 1542</div>
                                             <div className="fastview__name">
                                                 Тушеное мясо лося, 325 г
@@ -67,7 +67,7 @@ const Modal = ({ active, setActive }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-6">
+                                        <div className="col-6 modal__column">
                                             <div className="fastview__image">
                                                 <img className="fastview__img" src="https://manbox.ru/image/cachewebp/catalog/builder/1442_new-350x350.webp" alt=""/>
                                             </div>

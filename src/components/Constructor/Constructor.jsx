@@ -4,17 +4,21 @@ import ProductList from "../ProductList";
 import Modal from "../Modal";
 import closeIcon from "../../static/img/close-line.svg";
 import {Link} from "react-router-dom";
+import close from "../../static/img/close-line.svg";
 
 const Constructor = () => {
-    const  [ modalActive, setModalActive ] = useState(false)
+    const [modalActive, setModalActive] = useState(false)
+    const [kit, setKit] = useState(false)
     const filterRef = useRef(null);
     const sortRef = useRef(null);
+    const filterMobileRef = useRef(null);
 
     const filterToggle = () => filterRef.current.classList.toggle("open")
     const sortToggle = () => sortRef.current.classList.toggle("open")
-
+    const filterMobileAdd = () => filterMobileRef.current.classList.add("mobile-modal")
+    const filterMobileDelete = () => filterMobileRef.current.classList.remove("mobile-modal")
     return (
-        <div className="builder builder-top">
+        <div className={kit ? "builder-bg" : "builder builder-top"}>
             <div className="left">
                 <div className="left__boxes">
                     <div className="row">
@@ -143,8 +147,8 @@ const Constructor = () => {
                         </h2>
                     </div>
                     <div className="filter">
-                        <div className="row">
-                            <div className="col-4">
+                        <div className="row filter__row">
+                            <div className="col-4 filter__column">
                                 <div onClick={filterToggle} ref={filterRef} className="filter__select">
                                     <div className="filter__title">
                                         Выбрать категорию
@@ -153,175 +157,205 @@ const Constructor = () => {
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Все товары</b>
-                                                <input className="content__checked-input" value="all" checked="checked" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" value="all" checked="checked"
+                                                       type="radio" name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">АКЦИЯ</b>
-                                                <input className="content__checked-input" value="sale" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" value="sale" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Авто</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Сеты</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Гастрономические сеты
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сеты для бара
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сеты для красоты
-                                                <input className="content__checked-input"  type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сеты для приготовления алкоголя
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сеты для развлечений
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сеты для туризма и отдыха
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Бар</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Барный инвентарь
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Посуда
-                                                <input className="content__checked-input"  type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Приготовление алкоголя
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 Гастрономия
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Для приготовления блюд
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Напитки
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Соусы, специи
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Мясо
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Рыба
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Сладости
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Снеки
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Чай и кофе
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Инструменты</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Развлечения</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Туризм и отдых</b>
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Рыбалка
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Походный инвентарь
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Путешествия
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                             <label className="content__input">
                                                 Спортивные товары
-                                                <input className="content__checked-input" type="radio" name="filter-category" />
+                                                <input className="content__checked-input" type="radio"
+                                                       name="filter-category"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-4 filter__col">
                                 <div onClick={sortToggle} ref={sortRef} className="filter__select">
                                     <div className="filter__title">
                                         Сортировать
@@ -330,88 +364,318 @@ const Constructor = () => {
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Популярные</b>
-                                                <input className="content__checked-input" type="radio" name="sort" />
+                                                <input className="content__checked-input" type="radio" name="sort"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Новинки</b>
-                                                <input className="content__checked-input" type="radio" name="sort" />
+                                                <input className="content__checked-input" type="radio" name="sort"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Сначала дорогие</b>
-                                                <input className="content__checked-input" type="radio" name="sort" />
+                                                <input className="content__checked-input" type="radio" name="sort"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                         <div className="content__item">
                                             <label className="content__input">
                                                 <b className="content__category">Сначала дешевые</b>
-                                                <input className="content__checked-input" type="radio" name="sort" />
+                                                <input className="content__checked-input" type="radio" name="sort"/>
                                                 <div className="control-indicator-radio"></div>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-4">
+                            <div className="col-4 filter__col">
                                 <div className="filter__search">
                                     <input className="filter__input" type="text" placeholder="Поиск по названию"/>
+                                </div>
+                            </div>
+                            <div onClick={filterMobileAdd} className="filter__svg">Фильтр
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="none" fillRule="evenodd">
+                                        <path d="M0 0h24v24H0z"></path>
+                                        <path data-v-a5bc8348=""
+                                              d="M4.126 6a4.002 4.002 0 017.748 0H22a1 1 0 010 2H11.874a4.002 4.002 0 01-7.748 0H2a1 1 0 110-2h2.126zm8 10a4.002 4.002 0 017.748 0H22a1 1 0 010 2h-2.126a4.002 4.002 0 01-7.748 0H2a1 1 0 010-2h10.126zM16 19a2 2 0 100-4 2 2 0 000 4zM8 9a2 2 0 100-4 2 2 0 000 4z"
+                                              fill="currentColor" fillRule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="filter__mobile-filters" ref={filterMobileRef}>
+                            <div className="filter__mobile-block">
+                                <div className="sort__top-items filter__top">
+                                    <div className="sort__title">Фильтры</div>
+                                    <div onClick={filterMobileDelete} className="sort__close"><img className="sort__close-btn" src={close} alt=""/>
+                                    </div>
+                                </div>
+                                <div className="filters">
+                                    <div className="col-6 mobile-filters">
+                                        <div className="content content-hidden">
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Все товары</b>
+                                                    <input className="content__checked-input" value="all"
+                                                           checked="checked" type="radio" name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">АКЦИЯ</b>
+                                                    <input className="content__checked-input" value="sale" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Авто</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Сеты</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Гастрономические сеты
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сеты для бара
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сеты для красоты
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сеты для приготовления алкоголя
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сеты для развлечений
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сеты для туризма и отдыха
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Бар</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Барный инвентарь
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Посуда
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Приготовление алкоголя
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    Гастрономия
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Для приготовления блюд
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Напитки
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Соусы, специи
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Мясо
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Рыба
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Сладости
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Снеки
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Чай и кофе
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Инструменты</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Развлечения</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                            </div>
+                                            <div className="content__item">
+                                                <label className="content__input">
+                                                    <b className="content__category">Туризм и отдых</b>
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Рыбалка
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Походный инвентарь
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Путешествия
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <label className="content__input">
+                                                    Спортивные товары
+                                                    <input className="content__checked-input" type="radio"
+                                                           name="filter-category"/>
+                                                    <div className="control-indicator-radio"></div>
+                                                </label>
+                                                <div className="button content__button">
+                                                    <button className="btn content__btn">
+                                                        Применить
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="product product--margin">
                         <div className="row">
-                            <ProductList setModalActive={setModalActive} />
+                            <ProductList setModalActive={setModalActive}/>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="right">
                 <div className="right__cart">
-                    <div className="right__top">
-                        <div className="right__chosen-title">
-                            <h3 className="right__title">ВАШ НАБОР</h3>
-                            <div className="right__button">
-                                <button className="right__close"> очистить
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 1L1 9" stroke="black" strokeWidth="2" strokeLinecap="round">
-                                        </path>
-                                        <path d="M1 1L9 9" stroke="black" strokeWidth="2" strokeLinecap="round">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="button">
-                            <div className="modal-close">
-                                <a className="close--btn">
-                                    <img className="close--icon" src={closeIcon} alt=""/>
-                                </a>
-                            </div>
-                        </div>
-                            <div className=" products right__products">
-                                <div className="right__products--row">
-                                    <div className="right__packing--item">
-                                        <p className="right__product--name">Картонная коробка MANBOX 29х21х11 см
-                                            ОРАНЖЕВАЯ</p>
-                                    </div>
-                                    <div className="right__product--amount">
-                                        <div className="right__product--number">
-                                            <input className="right__input" type="text" disabled="disabled"/>
-                                        </div>
-                                    </div>
-                                    <div className="right__product--price">
-                                        <p className="product__price--number">690 р.</p>
-                                    </div>
+                    <div className={kit ? "right__top--transform" : "right__top"}>
+                        <div className="right__top-block">
+                            <div className="right__chosen-title">
+                                <h3 className="right__title">ВАШ НАБОР</h3>
+                                <div className="right__button">
+                                    <button className="right__close"> очистить
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1L1 9" stroke="black" strokeWidth="2" strokeLinecap="round">
+                                            </path>
+                                            <path d="M1 1L9 9" stroke="black" strokeWidth="2" strokeLinecap="round">
+                                            </path>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
+                            <div className="button" onClick={() => setKit(false)}>
+                                <div className="modal-close">
+                                    <a className="close--btn">
+                                        <img className="close--icon" src={closeIcon} alt=""/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className=" products right__products">
+                            <div className="right__products--row">
+                                <div className="right__packing--item">
+                                    <p className="right__product--name">Картонная коробка MANBOX 29х21х11 см
+                                        ОРАНЖЕВАЯ</p>
+                                </div>
+                                <div className="right__product--amount">
+                                    <div className="right__product--number">
+                                        <input className="right__input" type="text" disabled="disabled"/>
+                                    </div>
+                                </div>
+                                <div className="right__product--price">
+                                    <p className="product__price--number">690 р.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="right__bottom">
                         <div className="right__filling">
@@ -484,14 +748,18 @@ const Constructor = () => {
                                 Минимальная сумма заказа
                                 <b>1500 р</b>
                             </div>
-                            <div className="button--block">
-                                    <button className="button--block__btn">Посмотреть </button>
+                            <div className="button checkout__button">
+                                <button className={kit ? "checkout__btn-display" : "checkout__btn"}
+                                        onClick={() => setKit(true)}>Посмотреть
+                                </button>
+                                <button className={kit ? "checkout__btn" : "checkout__btn-display"}>Оформить заказ
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Modal active={modalActive} setActive={ setModalActive }/>
+            <Modal active={modalActive} setActive={setModalActive}/>
         </div>
     );
 };
