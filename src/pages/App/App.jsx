@@ -1,13 +1,17 @@
+import {QueryClientProvider, QueryClient} from "react-query";
 import './App.scss';
+import Layout from "../../layout/Layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Layout from "../../layout/Layout";
 
+const queryClient = new QueryClient();
 
 function App() {
-  return (
-      <Layout/>
-  )
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Layout/>
+        </QueryClientProvider>
+    )
 
 }
 

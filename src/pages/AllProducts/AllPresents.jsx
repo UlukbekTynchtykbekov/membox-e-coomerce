@@ -1,14 +1,20 @@
 import React, {useState} from 'react';
-import "../../styles/all-products.scss"
+import { useQuery } from "react-query";
 import Helmet from "../../layout/Helmet";
 import CommonRouter from "../../components/CommonRouter";
 import CommonTitle from "../../components/CommonTitle";
 import Filter from "../../components/Filter";
 import MainProductsList from "../../components/MainProducts";
+import axios from "axios";
+import "../../styles/all-products.scss"
 
 const AllPresents = () => {
     const [activeSort, setActiveSort] = useState(false);
 
+    const { isLoading, data } = useQuery("all-products", () => {
+        return axios.get("https://timur4057.pythonanywhere.com/box")
+    })
+    console.log(data.data)
     const saleRouters = [
         {
             route: "home",
@@ -19,6 +25,10 @@ const AllPresents = () => {
             title: "Акции"
         },
     ]
+
+    if (isLoading){
+       return  <h2>Loading....</h2>
+    }
 
     return (
         <Helmet title="all-products">
@@ -49,7 +59,11 @@ const AllPresents = () => {
                         </div>
                         <div className="col-9 products-column">
                             <div className="presents">
-                                <MainProductsList />
+                                {/*{*/}
+                                {/*    data?.data.map(box => {*/}
+                                {/*        return <MainProductsList key={box.id} box={box} />*/}
+                                {/*    })*/}
+                                {/*}*/}
                             </div>
                         </div>
                     </div>
