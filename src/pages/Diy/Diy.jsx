@@ -1,41 +1,30 @@
 import React, {useState} from 'react';
-import { useQuery } from "react-query";
 import Helmet from "../../layout/Helmet";
 import CommonRouter from "../../components/CommonRouter";
 import CommonTitle from "../../components/CommonTitle";
 import Filter from "../../components/Filter";
 import MainProductsList from "../../components/MainProducts";
-import axios from "axios";
-import "../../styles/all-products.scss"
 
-const AllPresents = () => {
+const Diy = () => {
     const [activeSort, setActiveSort] = useState(false);
 
-    const { isLoading, data } = useQuery("all-products", () => {
-        return axios.get("https://timur4057.pythonanywhere.com/box")
-    })
-    console.log(data.data)
     const saleRouters = [
         {
             route: "home",
             title: "Главная"
         },
         {
-            route: "all-products",
-            title: "Акции"
+            route: "diy",
+            title: "Сделай сам"
         },
     ]
 
-    if (isLoading){
-       return  <h2>Loading....</h2>
-    }
-
     return (
-        <Helmet title="all-products">
+        <Helmet title="СДЕЛАЙ САМ">
             <section className="all-products">
                 <div className="container">
                     <CommonRouter routes={saleRouters} />
-                    <CommonTitle title="Подарочные наборы" />
+                    <CommonTitle title="СДЕЛАЙ САМ" />
                     <div onClick={() => setActiveSort(true)} className={ activeSort ? "sticky-active" : "sticky" }>
                         <div className="sticky__top">
                             <div className="filter-button">
@@ -59,11 +48,7 @@ const AllPresents = () => {
                         </div>
                         <div className="col-9 products-column">
                             <div className="presents">
-                                {/*{*/}
-                                {/*    data?.data.map(box => {*/}
-                                {/*        return <MainProductsList key={box.id} box={box} />*/}
-                                {/*    })*/}
-                                {/*}*/}
+                                <MainProductsList />
                             </div>
                         </div>
                     </div>
@@ -73,4 +58,4 @@ const AllPresents = () => {
     );
 };
 
-export default AllPresents;
+export default Diy;

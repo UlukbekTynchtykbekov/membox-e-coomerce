@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./main-products-card.scss";
 
-const MainProductsCard = () => {
+const MainProductsCard = ({box}) => {
     return (
         <div className="col-4 presents__column">
             <div className="presents__item">
@@ -39,15 +39,17 @@ const MainProductsCard = () => {
                 </div>
                 <div className="presents__middle middle">
                     <div className="presents__price">
-                        <div className="presents__price-number">6990 р.</div>
-                        <div className="presents__old-price">3990 р.</div>
+                        <div className="presents__price-number">{box.price}</div>
+                        {
+                            box.oldPrice ? <div className="presents__old-price">{box.oldPrice}</div> : null
+                        }
                     </div>
                 </div>
                 <div className="presents__bottom bottom">
                     <div className="presents__sticker">
                         Бестселлер
                     </div>
-                    <div className="presents__name"><Link className="presents__name-link">Бармен Box XL</Link></div>
+                    <div className="presents__name"><Link className="presents__name-link">{box.title}</Link></div>
                     <div className="presents__rating">
                         <div className="presents__start">
                             <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35"

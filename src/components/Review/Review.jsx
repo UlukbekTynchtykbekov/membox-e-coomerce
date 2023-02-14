@@ -19,6 +19,12 @@ const Review = () => {
                     slidesToShow: 2,
                 },
             },
+            {
+                breakpoint: 621,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
         ],
     }
     return (
